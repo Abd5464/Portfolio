@@ -1,0 +1,301 @@
+* {
+  border: px solid red;
+  margin: 0px;
+  padding: 0px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+h1,
+h2,
+h3,
+p {
+  color: aliceblue;
+}
+body {
+  background-color: black;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header a {
+  grid-column: 1/7;
+  font-family: "Lucida Sans";
+color: rgb(49, 46, 46);
+text-decoration: overline;
+}
+header .nav {
+  grid-column: span 6;
+  justify-self: end;
+}
+header .nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+header .nav a:hover {
+  color: wheat;
+}
+
+hr {
+  width: 100%;
+}
+
+.write-up {
+  grid-column: span 6;
+  display: grid;
+}
+.me {
+  padding-bottom: 60px;
+}
+.write-up h1 {
+  color: white;
+  font-size: 53px;
+  height: 200px;
+}
+.write-up p {
+  color: white;
+  font-size: 23px;
+}
+
+.write-up a {
+  align-self: end;
+  color: gray;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.me img {
+  width: 100%;
+  grid-column: span 6;
+  border-radius: 10px;
+}
+
+.pro h1 {
+  grid-column: span 12;
+  color: grey;
+  justify-self: center;
+}
+.pro a {
+  grid-column: span 4;
+  text-decoration: none;
+  color: grey;
+}
+.ab {
+  grid-column: span 12;
+}
+.ab h1 {
+  color: grey;
+}
+.pic {
+  grid-column: span 6;
+}
+
+.pro a h2{
+  text-align: center;
+}
+.pro a img{
+  border-radius: 10px;
+}
+.note {
+  grid-column: span 6;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.pic img {
+  width: 100%;
+}
+.pro a img {
+  width: 100%;
+}
+.skill span{
+  grid-column: span 5 ;
+
+}
+/* 
+.skill .spn{
+  grid-column: 5/12;
+  justify-self: end;
+  text-align: center;
+}
+.skill  span h1 {
+  grid-column: span 6;
+  justify-self: end;
+  color: black;
+  text-align: center;
+}
+.skill .sk{
+  grid-column: span 12;
+  justify-self:center ;
+} */
+.skill h1{
+  grid-column: span 12;
+  justify-self: center;
+  color: #766;
+}
+.ski{
+  color: rgb(130, 13, 13);
+}
+.skill div{
+  grid-column: span 6;
+  justify-self:  center;
+}
+h1{
+  padding-bottom: 10px;
+}
+.contact {
+  grid-column: span 6;
+}
+.form {
+  grid-column: span 6;
+}
+.contact h2 {
+  font-size: 38px;
+}
+.email ,.name ,.message {
+width: 300px;
+height: 50px;
+border: none;
+outline: none;
+border-radius: 10px;
+color: #766;
+}
+
+
+.message{
+  height: 140px;
+  padding-top:10px;
+  width: 400px;
+}
+.email ,.name ,.message:focus{
+border: 2px solid rgb(78, 39, 2);
+}
+.message::placeholder{
+  color:black;
+}
+ 
+.form{
+    grid-column: span 6;
+}
+.contact{
+  grid-column: span 6;
+} 
+.contact p{
+  margin-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:28px;
+  color:  GREY;
+}
+button{
+  grid-column: 12/12;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  width: 150px;
+  justify-self: center;
+background: linear-gradient(black,#766);
+}
+label{
+  color: grey;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+}
+footer ,.skill{
+  background-color: rgb(24, 24, 24);
+}
+/* like the input */
+
+
+@media screen and (max-width: 870px) {
+  body {
+    background-color: rgb(42, 39, 39);
+    padding: 0 50px;
+  }
+
+
+header .nav { 
+  grid-column: 5/11;
+/* justify-self:center; */
+justify-self: end;
+}
+header a{
+  grid-column: span 1 ;
+  /* justify-self: center; */
+}
+.write-up h1{
+font-size: 40px;
+}
+.write-up p{
+  align-self: first baseline;
+}
+.me img {
+  width: 100%;
+  grid-column: 7/11;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.note{
+  grid-column: span 4;
+  align-self: center;
+}
+.skill{
+  grid-template-columns: repeat(3,1fr);
+  }
+.skill h2{
+grid-column: span 3;
+}
+.write-up p{
+  margin-bottom: 20px;
+}
+
+.pro a {
+  grid-column: span 6;
+}
+.pro a:nth-child(4){
+grid-column: span 12;
+justify-self: center;
+}
+.last img{
+  height: 250px;
+}
+.message{
+  height: 140px;
+  padding-top:10px;
+  width: 300px;
+}
+button{
+  grid-column: 9/12;
+}
+.note{
+  width: 300px;
+}
+
+/* .skill span{
+  grid-column: span 5 ;
+
+}
+
+.skill {
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(1,1fr);
+}
+.skill span ,.skill .spn {
+  grid-column: span 6;
+  justify-self: end;
+  color: black;
+  text-align: center;
+} */
+
+}
+@media screen and (max-width: 450px){
+  body{
+    background-color: blue;
+  }
+}
